@@ -6,8 +6,21 @@ b{
 	background-color:$hero-bg;
 	border-bottom: 5px solid $body-bg;
 	padding-top:180px;
+	padding-left: 8%;
 
+	.tag-line > h3 {
+		margin-top:-13px;
+	}
+
+	.download-holder {
+		padding-top:20px;
+	}
+
+	.button.download {
+		width:85%;
+	}
 }
+
 .main-nav {
 	background-color:$hero-bg;
 	border-bottom: 5px solid $secondary-color-contrast;
@@ -27,6 +40,12 @@ b{
 		border-top:1px solid $body-shadow;
 		border-bottom:1px solid $body-light;
 	}
+}
+
+.features .download{
+	/*line height plus font size?*/
+	margin-top:3.4em;
+	width:90%;
 }
 
 .hpadding {
