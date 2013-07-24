@@ -1,6 +1,15 @@
+.button-flat {
+  @include button-base;
+  @include button-size;
+  @include button-style($primary-color, $radius, false);
+}
+
+
+
 b{
 	color:$primary-color;
 }
+
 .banner {
 	height:880px;
 	background-color:$hero-bg;
@@ -16,7 +25,8 @@ b{
 		padding-top:20px;
 	}
 
-	.button.download {
+	.button.download,
+	.button-flat.download {
 		width:85%;
 	}
 }

@@ -1,8 +1,7 @@
 # FlatG
+![FlatG website](https://raw.github.com/goliatone/flatg-website/master/app/assets/images/flat-g-logo-128.png)
 
 [![Build Status](https://secure.travis-ci.org/goliatone/FlatG.png)](http://travis-ci.org/goliatone/FlatG)
-
-FlatG website
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].
