@@ -1,0 +1,44 @@
+b{
+	color:$primary-color;
+}
+.banner {
+	height:880px;
+	background-color:$hero-bg;
+	border-bottom: 5px solid $body-bg;
+	padding-top:180px;
+
+}
+.main-nav {
+	background-color:$hero-bg;
+	border-bottom: 5px solid $secondary-color-contrast;
+}
+
+.content {
+	margin-top:90px;
+	margin-bottom: 90px;
+}
+
+.features .notice {
+	text-align: center;
+	padding-top:30px;
+	padding-bottom: 60px;
+
+	hr {
+		border-top:1px solid $body-shadow;
+		border-bottom:1px solid $body-light;
+	}
+}
+
+.hpadding {
+	padding-bottom:90px;
+}
+
+.footer {
+	background-color:$footer-bg;
+	padding-top:40px;
+	border-top: 5px solid $secondary-color-contrast;
+}
+
+.top-bar .logo {
+	padding-top:19px;
+}
