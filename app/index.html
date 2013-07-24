@@ -2,121 +2,63 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title><%= name %></title>
-  <!-- build:css css/app.css -->
-  <link rel="stylesheet" href="assets/css/app.css" />
-  <!-- endbuild -->
-  <!-- build:js js/scripts.js -->
-  <script src="components/foundation/js/vendor/custom.modernizr.js"></script>
-  <script src="components/foundation/js/vendor/jquery.js"></script>
-  <!-- endbuild -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>FlatG</title>
+    <!-- build:css css/app.css -->
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <!-- endbuild -->
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Open Sans', sans-serif; -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- build:js js/scripts.js -->
+    <script src="components/foundation/js/vendor/custom.modernizr.js"></script>
+    <script src="components/foundation/js/vendor/jquery.js"></script>
+    <!-- endbuild -->
 </head>
 <body>
 <!-- TEMPLATE -->
+
+    <div class="banner">
+        <div class="row">
+            <div class="large-8 large-centered small-10 small-centered columns">
+                <img src="assets/images/flat-g-logo-128.png" alt="flatg logo"/>
+                <img src="assets/images/flat-g.png" alt="flatg type"/>
+                <span>PHP flat file [blog] engine</span>
+                <a href="#" class="button radius">Download FlatG v0.1.0.beta</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+    </div>
 <!-- Header and Nav -->
-  <nav class="top-bar">
-    <ul class="title-area">
-      <!-- Title Area -->
-      <li class="name">
-        <h1>
-          <a href="#">
-            Top Bar Title
-          </a>
-        </h1>
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Left Nav Section -->
-      <ul class="left">
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a class="active" href="#">Main Item 1</a>
-          <ul class="dropdown">
-            <li><label>Section Name</label></li>
-            <li><a href="#" class="">Dropdown Level 1</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><label>Section Name</label></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><a href="#">See all &rarr;</a></li>
-          </ul>
-        </li>
-        <li class="divider"></li>
-        <li><a href="#">Main Item 2</a></li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#">Main Item 3</a>
-          <ul class="dropdown">
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><a href="#">See all &rarr;</a></li>
-          </ul>
-        </li>
-       
-      </ul>
-
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#">Main Item 4</a>
-          <ul class="dropdown">
-            <li><label>Section Name</label></li>
-            <li class="has-dropdown">
-              <a href="#" class="">Has Dropdown, Level 1</a>
-              <ul class="dropdown">
-                <li><a href="#">Dropdown Options</a></li>
-                <li><a href="#">Dropdown Options</a></li>
-                <li class="has-dropdown">
-                  <a href="#">Has Dropdown, Level 2</a>
-                  <ul class="dropdown test">
-                    <li><a href="#">Subdropdown Option</a></li>
-                    <li><a href="#">Subdropdown Option</a></li>
-                    <li><a href="#">Subdropdown Option</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Subdropdown Option</a></li>
-                <li><a href="#">Subdropdown Option</a></li>
-                <li><a href="#">Subdropdown Option</a></li>
-              </ul>
+    <nav class="top-bar">
+        <ul class="title-area">
+            <!-- Title Area -->
+            <li class="name">
+                <h1>
+                    <a href="#">
+                        <img src="assets/images/flat-g-logo-64.png" alt="flatg logo"/>
+                    </a>
+                </h1>
             </li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><label>Section Name</label></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><a href="#">See all &rarr;</a></li>
-          </ul>
-        </li>
-        <li class="divider"></li>
-        <li><a href="#">Main Item 5</a></li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#">Main Item 6</a>
-          <ul class="dropdown">
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><a href="#">See all &rarr;</a></li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-  </nav>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Issues</a></li>
+                <li><a href="#">Themes</a></li>
+            </ul>
+        </section>
+    </nav>
 
 
   <!-- End Header and Nav -->
@@ -228,25 +170,27 @@
 
 
   <!-- Footer -->
-
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr />
-      <div class="row">
-        <div class="large-6 columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Section 1</a></li>
-            <li><a href="#">Section 2</a></li>
-            <li><a href="#">Section 3</a></li>
-            <li><a href="#">Section 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>        
+    <div class="footer">
+        <footer class="row">
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>2013 &copy; Copyright FlatG</p>
+                    </div>
+                    <div class="large-6 columns">
+                        <ul class="inline-list right">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Docs</a></li>
+                            <li><a href="#">Issues</a></li>
+                            <li><a href="#">Themes</a></li>
+                            <li><a href="#"><img src="assets/images/github-16.png" alt="github logo"/></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>       
 <!-- TEMPLATE -->        
 </body>
     <!-- build:js js/foundation.js -->

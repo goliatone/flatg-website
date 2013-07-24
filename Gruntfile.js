@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         },
         preprocess: {
             dev: {
-                src : '<%= yeoman.app %>/index.tpl.html',
+                src  : '<%= yeoman.app %>/index.tpl.html',
                 dest : '<%= yeoman.app %>/index.html'
             },
             prod: {
@@ -100,7 +100,7 @@ module.exports = function (grunt) {
                     middleware: function (connect) {
                         return [
                             lrSnippet,
-                            phpGateway('app'),
+                            // phpGateway('app'),
                             mountFolder(connect, '.tmp'),
                             mountFolder(connect, yeomanConfig.app)
                         ];
@@ -111,7 +111,7 @@ module.exports = function (grunt) {
                 options: {
                     middleware: function (connect) {
                         return [
-                            phpGateway('app'),
+                            // phpGateway('app'),
                             mountFolder(connect, '.tmp'),
                             mountFolder(connect, 'test')
                         ];
