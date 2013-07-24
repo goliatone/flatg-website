@@ -1,0 +1,44 @@
+ # RewriteBase /slimg/ 
+
+ #  # test string is a valid files
+ #  RewriteCond %{SCRIPT_FILENAME} !-f
+ #  # test string is a valid directory
+ #  RewriteCond %{SCRIPT_FILENAME} !-d
+
+ #  RewriteRule ^(.*)$   index.php?uri=/$1    [NC,L,QSA]
+
+# RewriteBase /slimg/
+# Redirect 301 ^(.*)$ http://rooturaj.com
+
+# Options +FollowSymLinks
+# RewriteEngine On
+# RewriteRule ^(.*)$ index.php [NC,L]
+
+
+
+#############################################
+# Turn on URL rewriting
+RewriteEngine On
+
+# Installation directory
+RewriteBase /dreamcach.es/
+#RewriteBase /
+
+# Protect hidden files from being viewed
+<Files .*>
+	Order Deny,Allow
+	Deny From All
+</Files>
+
+# Protect application and system files from being viewed
+#RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
+
+RewriteCond %{REQUEST_URI} !^/dreamcach.es/.*$
+RewriteRule ^(.*)$ /slimg/$1 [QSA,L]
+
+# Allow any files or directories that exist to be displayed directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php/URL
+RewriteRule .* index.php/$0 [PT]
