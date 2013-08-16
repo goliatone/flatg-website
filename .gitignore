@@ -24,5 +24,4 @@ app/themes
 *.sublime-*
 
 ## Secret stuff :)
-*/.passwords
 app/config/.passwords
