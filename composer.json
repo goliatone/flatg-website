@@ -1,0 +1,60 @@
+{
+    "name": "goliatone/flattenr",
+    "config":{
+    	"vendor-dir":"app/backend"
+    },
+    "authors": [
+        {
+            "name": "goliatone",
+            "email": "hello@goliatone.com"
+        }
+    ],
+    "require": {
+     	"php": ">=5.4",
+	    "goliatone/flatg": "1.0.x-dev"
+	},
+	"minimum-stability": "dev",
+    "repositories": [
+	   {
+	     "type": "git",
+	     "version":"1.0.0",
+	     "url": "git://github.com/goliatone/flatg-core.git",
+	     "reference": "master as 1.0.x-dev"
+	   },
+	   {
+            "type": "package",
+            "package": {
+                "name": "wolfie/php-markdown",
+                "version": "1.2.2",
+                "autoload": {"classmap": ["markdown.php"]},
+                "source": {
+                    "url": "git://github.com/wolfie/php-markdown.git",
+                    "type": "git",
+                    "reference": "extra"
+                }
+            }
+        },
+	    {
+            "type": "package",
+            "package": {
+                "name": "csphere/githubwrapper",
+                "version": "master",
+                "version": "1.0.0",
+                "autoload": {"classmap": ["githuboauth.class.php"]},
+                "source": {
+                    "url": "git://github.com/csphere/GithubApiWrapper-PHP.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+	],
+	"scripts": {
+        "post-install-cmd": [
+            "goliatone\\flatg\\composer\\Installer::build"
+        ],
+        "post-update-cmd": [
+        	"goliatone\\flatg\\composer\\Installer::build"
+        ]
+    }
+}
