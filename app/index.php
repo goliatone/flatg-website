@@ -8,13 +8,12 @@
  * TODO: Handle callbacks, controllers. Need simple class
  *       loader.
  */
-
 define('EXT', '.php');
 define('DS', DIRECTORY_SEPARATOR);
 // Set the full path to the docroot
 define('ROOT_DIR', realpath(dirname(__FILE__)).DS);
 
-$application = 'system';
+$application = './backend';
 define('APPPATH', realpath($application).DIRECTORY_SEPARATOR);
 // Define the absolute paths for configured directories
 /*
@@ -22,11 +21,9 @@ define('MODPATH', realpath($modules).DIRECTORY_SEPARATOR);
 define('SYSPATH', realpath($system).DIRECTORY_SEPARATOR);
 */
 
-//require APPPATH.'flatg.php';
-require APPPATH.'flattened.php';
+include('./backend/autoload.php');
 
 $config = require(APPPATH.'config/main.php');
-
 FlatG::initialize($config);
 
 ////////////////////////////////////////////////////////////////////////

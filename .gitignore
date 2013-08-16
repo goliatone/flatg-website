@@ -12,8 +12,17 @@ node_modules
 dist
 temp
 libs/*
+
+## Bower cruft
 app/components
+
+## FlatG cruft
 app/backend
+app/themes
 
 ## IDE garbage
 *.sublime-*
+
+## Secret stuff :)
+*/.passwords
+app/config/.passwords
