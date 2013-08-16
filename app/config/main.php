@@ -6,30 +6,23 @@
  * $passwords is an associative array that holds backend
  * storage user account info.
  */
-$passwords = include_once('./.passwords');
+$passwords = include_once('./config/.passwords');
 
-//TODO: Normalize basePath & base_url. Make robust.
-
-//TODO: We need to move index from router, and then 
-//handle/simplify all path management!! look into an 
-//autoloader. Also, could we manage this in a helper?!
-$config = array(
+return array(
     'base_path' => APPPATH,
     'view_dir'  => "themes",
     'theme' => 'default',
     'articles_extension' =>'yaml',
     'articles_path' => ROOT_DIR."articles",
-    //TODO: Rename this to asset_url.
-    //TODO: This will break once we are online and 
     //we dont have the localhost/dreamcach.es this should be base url plu
     'asset_dir' => "assets/",
     'layout' => 'layout',
     'featured_article' => 'hello-world',
     'router' => array(
-        'basePath' => '/flattest.com/'
+        'basePath' => '/'
      ),
      //TODO: We should we able to get this by default.
-    'base_url' => '/flattest.com/',
+    'base_url' => '/',
     
     'analytics_code'=>'UA-41380790-1',
     
