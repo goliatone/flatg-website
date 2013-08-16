@@ -38,6 +38,7 @@
     "grunt-rev": "~0.1.0",
     "grunt-env": "~0.4.0",
     "grunt-preprocess": "~2.3.0",
-    "gateway": "~0.1.1"
+    "gateway": "~0.1.1",
+    "connect-modrewrite": "~0.5.4"
   }
 }

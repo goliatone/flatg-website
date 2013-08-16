@@ -5,6 +5,13 @@ var mountFolder = function (connect, dir) {
 };
 
 /**
+ * Connect modrewrite middleware to re route
+ * everything into php?
+ */
+var modRewrite = require('connect-modrewrite');
+
+
+/**
  * PHP gateway, handle template files, yay!!
  */
 var gateway = require('gateway');
@@ -97,9 +104,12 @@ module.exports = function (grunt) {
             },
             livereload: {
                 options: {
-                    middleware: function (connect) {
+                    middleware: function (connect, options) {
                         return [
                             lrSnippet,
+                            modRewrite([
+                                '^/notes(.*)$ /index.php?r=notes$1'
+                            ]),
                             phpGateway('app'),
                             mountFolder(connect, '.tmp'),
                             mountFolder(connect, yeomanConfig.app)
@@ -109,7 +119,7 @@ module.exports = function (grunt) {
             },
             test: {
                 options: {
-                    middleware: function (connect) {
+                    middleware: function (connect, options) {
                         return [
                             // phpGateway('app'),
                             mountFolder(connect, '.tmp'),

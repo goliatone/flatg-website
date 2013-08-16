@@ -23,6 +23,17 @@ define('SYSPATH', realpath($system).DIRECTORY_SEPARATOR);
 include('./backend/autoload.php');
 $config = require('./config/main.php');
 use goliatone\flatg\FlatG;
+
+if(array_key_exists('QUERY_STRING', $_SERVER))
+{
+    $query = $_SERVER['QUERY_STRING'];
+
+    // if(array_key_exists('r', $query))
+    // {
+    $_SERVER['REQUEST_URI'] = '/notes/peperone';
+    // }
+}
+
 FlatG::initialize($config);
 
 ////////////////////////////////////////////////////////////////////////
@@ -41,11 +52,12 @@ FlatG::map('/404', array("goliatone\\flatg\\controllers\\DefaultController", "er
 ////////////////////////////////////////////////////////////////////////
 //BETA
 ////////////////////////////////////////////////////////////////////////
-$splash_handler = function($params){
-    echo file_get_contents('./index.html');
+$home = function($params){
+    FlatG::render('home');
 };
 
-FlatG::map('/', $splash_handler , array('methods' => 'GET', 'name'=>'home'));
+FlatG::map('/', $home , array('methods' => 'GET', 'name'=>'home'));
+FlatG::map('/notes/peperone', $home , array('methods' => 'GET', 'name'=>'home'));
 
 
 
