@@ -34,11 +34,11 @@
     "matchdep": "~0.1.1",
     "grunt-google-cdn": "~0.1.1",
     "markdown": "~0.4.0",
-    "grunt-ftp-deploy": "0.0.9",
     "grunt-rev": "~0.1.0",
     "grunt-env": "~0.4.0",
     "grunt-preprocess": "~2.3.0",
     "gateway": "~0.1.1",
-    "connect-modrewrite": "~0.5.4"
+    "connect-modrewrite": "~0.5.4",
+    "grunt-sftp-deploy": "0.0.9"
   }
 }
