@@ -317,7 +317,16 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
                     src: [
+                        './articles/**/*',
+                        './assets/**/*',
+                        './backend/**/*',
+                        './components/**/*',
+                        './config/**/*',
+                        './themes/**/*',
                         '*.{ico,txt}',
+                        '*.php',
+                        '*.js',
+                        '!index.tpl.html',
                         '.htaccess'
                     ]
                 }]
@@ -327,9 +336,9 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '<%%= yeoman.dist %>/assets/js',
+                    cwd: '<%= yeoman.dist %>/assets/js',
                     src: '*.js',
-                    dest: '<%%= yeoman.dist %>/assets/js'
+                    dest: '<%= yeoman.dist %>/assets/js'
                 }]
             }
         },
@@ -357,7 +366,7 @@ module.exports = function (grunt) {
                 rjsConfig: '<%= yeoman.assets %>/js/main.js'
             }
         },
-        'ftp-deploy': {
+        'sftp-deploy': {
             build: {
                 auth: {
                     host: 'enjoy-mondays.com',
@@ -365,8 +374,9 @@ module.exports = function (grunt) {
                     authKey: 'auth1'
                 },
                 src: 'dist',
-                dest: '/srv/www/dreamcach.es/public_html/kk',
-                exclusions: ['<%= yeoman.dist %>/**/.DS_Store', '<%= yeoman.dist %>/**/Thumbs.db']
+                dest: '/srv/www/flat-g.com/public_html',
+                exclusions: ['<%= yeoman.dist %>/**/.DS_Store', '<%= yeoman.dist %>/**/Thumbs.db'],
+                'server_sep': '/'
             }
         }
     });
@@ -375,7 +385,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('deploy', [
         // 'build',
-        'ftp-deploy'
+        // 'ftpush'
+        // 'ftpscript'
+        'sftp-deploy'
     ]);
 
     grunt.registerTask('server', function (target) {
@@ -416,7 +428,7 @@ module.exports = function (grunt) {
         'compass:dist',
         'useminPrepare',
         'concat',
-        'requirejs',
+        // 'requirejs',
         'imagemin',
         'htmlmin',
         'cssmin',
