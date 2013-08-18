@@ -24,14 +24,23 @@ include('./backend/autoload.php');
 $config = require('./config/main.php');
 use goliatone\flatg\FlatG;
 
-if(array_key_exists('QUERY_STRING', $_SERVER))
-{
-    $query = $_SERVER['QUERY_STRING'];
 
-    // if(array_key_exists('r', $query))
-    // {
-    $_SERVER['REQUEST_URI'] = '/notes/peperone';
-    // }
+/*
+ * We need to reroute routes from query string
+ * to PHP's REQUEST_URI which is what FlatG uses
+ * internally. I have not figured out a clean 
+ * way to do this in a node+PHP environment.
+ * So far, this works ok.
+ */
+if(array_key_exists('QUERY_STRING', $_SERVER))
+{   
+    //use built in method to create query string object.
+    parse_str($_SERVER['QUERY_STRING'], $query);
+    if(array_key_exists('r', $query))
+    {
+        $_SERVER['REQUEST_URI'] = '/'.ltrim($query['r']);
+        unset($query['r']);
+    }
 }
 
 FlatG::initialize($config);
@@ -57,7 +66,10 @@ $home = function($params){
 };
 
 FlatG::map('/', $home , array('methods' => 'GET', 'name'=>'home'));
-FlatG::map('/notes/peperone', $home , array('methods' => 'GET', 'name'=>'home'));
+FlatG::map('/notes/:slug', $home , array('methods' => 'GET', 
+                                         'name'=>'page',
+                                         'filters' => array( 'slug' => '(.*)')
+                                        ));
 
 
 
