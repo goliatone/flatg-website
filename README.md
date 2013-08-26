@@ -12,7 +12,7 @@ Download the [production version][min] or the [development version][max].
 ## Development
 `sudo npm install && bower install`
 
-##Bower
+## Bower
 >Bower is a package manager for the web. It offers a generic, unopinionated solution to the problem of front-end package management, while exposing the package dependency model via an API that can be consumed by a more opinionated build stack. There are no system wide dependencies, no dependencies are shared between different apps, and the dependency tree is flat.
 
 To register FlatG in the [bower](http://bower.io/) [registry](http://sindresorhus.com/bower-components/):
@@ -27,3 +27,14 @@ _(Coming soon)_
 
 ## Release History
 _(Nothing yet)_
+
+
+#### NOTES:
+
+- Use rsync to deploy builds. [Grunt][a] [tasks][b]
+- Refine build process and only export theme, rebuild assets and bundle together.
+
+
+
+[a]: https://github.com/jedrichards/grunt-rsync
+[b]: https://npmjs.org/package/grunt-rsync-2
