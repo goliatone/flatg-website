@@ -5,10 +5,24 @@
     "**/.*"
   ],
   "dependencies": {
-    "foundation": "~4.0.0",
     "jquery": "~1.9.1",
     "requirejs": "~2.1.4",
+    "foundation": "~4.3.2",
     "requirejs-text":"2.0.6",
     "requirejs-domready":"2.0.1"
-  }
+  },
+  // "exportsOverride": {
+  //   "jquery": {
+  //     "components": "jquery{.min}.js"
+  //   },
+  //   "requirejs": {
+  //     "components": "comprequire.js"
+  //   },
+  //   "requirejs-text": {
+  //     "components": "text.js"
+  //   },
+  //   "requirejs-domready": {
+  //     "components": "domReady.js"
+  //   }
+  // }
 }
