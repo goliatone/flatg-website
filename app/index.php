@@ -62,16 +62,55 @@ FlatG::map('/404', array("goliatone\\flatg\\controllers\\DefaultController", "er
 //BETA
 ////////////////////////////////////////////////////////////////////////
 $home = function($params){
-    FlatG::render('home');
+    $params['articles'] = FlatG::$articles;
+    
+    $slug = FlatG::featuredArticle();
+    //If we have slug, try to retrieve it. If we
+    //don't have a slug or the slug is invalid, get
+    //a default value. TODO: We should be able to 
+    //filter posts by.
+    $note = ArticleModel::findBy('slug',$slug, 0);
+    $params['note'] = $note;
+    
+    //TODO: If we are in 1, we should suggest a different
+    //model. Make method. ArticleModel::suggestNext();
+    $next = ArticleModel::findBy('slug',NULL, 1);
+    $params['next'] = $next;
+    $prev = ArticleModel::findBy('slug',NULL, 2);
+    $params['prev'] = $prev;
+    FlatG::render('home', $params);
 };
 
 FlatG::map('/', $home , array('methods' => 'GET', 'name'=>'home'));
-FlatG::map('/notes/:slug', $home , array('methods' => 'GET', 
+
+$note = function($params){
+    $params['articles'] = FlatG::$articles;
+    
+    $slug = FlatG::featuredArticle();
+    //If we have slug, try to retrieve it. If we
+    //don't have a slug or the slug is invalid, get
+    //a default value. TODO: We should be able to 
+    //filter posts by.
+    $note = ArticleModel::findBy('slug',$slug, 0);
+    $params['note'] = $note;
+    
+    //TODO: If we are in 1, we should suggest a different
+    //model. Make method. ArticleModel::suggestNext();
+    $next = ArticleModel::findBy('slug',NULL, 1);
+    $params['next'] = $next;
+    $prev = ArticleModel::findBy('slug',NULL, 2);
+    $params['prev'] = $prev;
+    FlatG::render('notes', $params);  
+};
+FlatG::map('/notes/:slug', $note , array('methods' => 'GET', 
                                          'name'=>'page',
                                          'filters' => array( 'slug' => '(.*)')
                                         ));
 
-
+FlatG::map('/logbook/tags(/:tag)',
+             $home, 
+             array('name' => 'tag')
+        );
 
 /////////////////////////////////////////////////////
 //Let's fire this BadBoy :)   
