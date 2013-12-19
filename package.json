@@ -26,7 +26,6 @@
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-livereload": "~0.1.2",
     "grunt-bower-requirejs": "~0.4.1",
-    "grunt-bower-hooks": "~0.2.0",
     "grunt-regarde": "~0.1.1",
     "grunt-karma": "~0.3.0",
     "grunt-open": "~0.2.0",
@@ -39,6 +38,7 @@
     "grunt-preprocess": "~2.3.0",
     "gateway": "~0.1.1",
     "connect-modrewrite": "~0.5.4",
-    "grunt-sftp-deploy": "0.0.9"
+    "grunt-sftp-deploy": "0.0.9",
+    "grunt-bower-task": "~0.3.4"
   }
 }
