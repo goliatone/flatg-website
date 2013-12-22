@@ -78,6 +78,11 @@ $home = function($params){
     $params['next'] = $next;
     $prev = ArticleModel::findBy('slug',NULL, 2);
     $params['prev'] = $prev;
+
+    // FlagG::view
+    if(array_key_exists('analytics_code', FlatG::$config))
+        $params['analytics_code'] = FlatG::$config['analytics_code'];
+
     FlatG::render('home', $params);
 };
 
@@ -100,6 +105,11 @@ $note = function($params){
     $params['next'] = $next;
     $prev = ArticleModel::findBy('slug',NULL, 2);
     $params['prev'] = $prev;
+
+     // FlagG::view
+    if(array_key_exists('analytics_code', FlatG::$config))
+        $params['analytics_code'] = FlatG::$config['analytics_code'];
+    
     FlatG::render('notes', $params);  
 };
 FlatG::map('/notes/:slug', $note , array('methods' => 'GET', 
