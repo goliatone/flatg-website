@@ -62,12 +62,6 @@
   <?php echo FlatG::renderView("footer", $data);?>
   <!-- Footer -->
 <!-- TEMPLATE -->
-<!-- <pre>
-    <?php print_r($_REQUEST);?>
-</pre>
-<pre>
-    <?php print_r($_SERVER);?>
-</pre>    -->     
 </body>
     <script src="assets/js/foundation.js"></script>
 
