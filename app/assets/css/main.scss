@@ -1,10 +1,17 @@
+.center-content {
+	text-align:center;
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
 .button-flat {
   @include button-base;
   @include button-size;
   @include button-style($primary-color, $radius, false);
 }
-
-
 
 b{
 	color:$primary-color;
@@ -17,7 +24,7 @@ b{
 	padding-top:180px;
 	padding-left: 8%;
 
-	.tag-line > h3 {
+	.tag-line > h3 {		
 		margin-top:-13px;
 		color:white;
 	}
@@ -28,8 +35,44 @@ b{
 
 	.button.download,
 	.button-flat.download {
-		width:85%;
+		width:90%;
 	}
+}
+
+/*NOTE 1:
+		UNDO OVERRIDE BY MOVING OTHER DECLARATION TO 
+		ITS OWN MEDIA QUERY
+*/
+@media only screen and (max-width: 48em) {
+	.content {
+		margin-top: 0px!important;/*NOTE 1*/
+	}
+	.features .notice {
+		padding-top:30px;
+		padding-bottom: 10px!important;
+	}
+
+    .banner{
+    	height:600px;
+    	padding-top:80px;
+    	padding-left: 0;
+    	.button-flat.download {
+			width:100%;
+		}
+		img.flatg {
+			padding-bottom:40px;
+		}
+
+		.small-centered-only {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			float: none !important;/*NOTE 1*/
+		}
+    } 
+    .features .download{
+    	width:100%!important;
+    }    
 }
 
 .main-nav {
@@ -44,7 +87,6 @@ b{
 
 .features .notice {
 	text-align: center;
-	padding-top:30px;
 	padding-bottom: 60px;
 
 	hr {
