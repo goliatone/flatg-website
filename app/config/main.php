@@ -24,7 +24,7 @@ return array(
      //TODO: We should we able to get this by default.
     'base_url' => '/',
     
-    'analytics_code'=>'UA-41380790-1',
+    'analytics_code'=>'UA-46640957-1',
     
     'backend_storage' =>array(
         'default'=>'dropbox',
