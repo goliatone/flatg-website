@@ -20,7 +20,7 @@ app/components
 
 ## FlatG cruft
 app/backend
-app/themes
+#app/themes
 
 ## IDE garbage
 *.sublime-*
