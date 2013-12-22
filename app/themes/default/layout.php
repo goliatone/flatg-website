@@ -11,9 +11,25 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
     <!-- font-family: 'Open Sans', sans-serif; -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
-
-    <script src="assets/js/scripts.js"></script>
+    <!-- build:js assets/js/scripts.js -->
+    <script src="components/foundation/js/vendor/custom.modernizr.js"></script>
+    <script src="components/foundation/js/vendor/jquery.js"></script>
+    <!-- endbuild -->
 </head>
+<!--
+============================================
+   ____       _ _       _                   
+  / ___| ___ | (_) __ _| |_ ___  _ __   ___ 
+ | |  _ / _ \| | |/ _` | __/ _ \| '_ \ / _ \
+ | |_| | (_) | | | (_| | || (_) | | | |  __/
+  \____|\___/|_|_|\__,_|\__\___/|_| |_|\___|
+
+============ (c) 2013 goliatone ============
+url: http://goliatone.com
+
+Hello there! Hope you enjoy this, crafted with
+love in Brooklyn.
+-->
 <body>
 <!-- TEMPLATE -->
 
@@ -63,7 +79,22 @@
   <!-- Footer -->
 <!-- TEMPLATE -->
 </body>
-    <script src="assets/js/foundation.js"></script>
+    <!-- build:js assets/js/foundation.js -->
+    <script src="components/foundation/js/foundation/foundation.js"></script>
+    <script src="components/foundation/js/foundation/foundation.alerts.js"></script>
+    <script src="components/foundation/js/foundation/foundation.clearing.js"></script>
+    <script src="components/foundation/js/foundation/foundation.cookie.js"></script>
+    <script src="components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="components/foundation/js/foundation/foundation.forms.js"></script>
+    <script src="components/foundation/js/foundation/foundation.joyride.js"></script>
+    <script src="components/foundation/js/foundation/foundation.magellan.js"></script>
+    <script src="components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="components/foundation/js/foundation/foundation.placeholder.js"></script>
+    <script src="components/foundation/js/foundation/foundation.reveal.js"></script>
+    <script src="components/foundation/js/foundation/foundation.section.js"></script>
+    <script src="components/foundation/js/foundation/foundation.tooltips.js"></script>
+    <script src="components/foundation/js/foundation/foundation.topbar.js"></script>
+    <!-- endbuild -->
 
     <script src="/components/requirejs/require.js" data-main="/main"></script>
     <script type="text/javascript">$(document).foundation();</script>
