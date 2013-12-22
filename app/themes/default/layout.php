@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>FlatG</title>
 
     <link rel="stylesheet" href="assets/css/app.css">
