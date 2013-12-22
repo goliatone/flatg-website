@@ -75,7 +75,13 @@ define('FlatG', ['jquery'], function($) {
 
     FlatG.prototype.init = function(){
         console.log('FlatG: Init!!!');
-        return 'This is just a stub!';
+        this.hideScrollbarIPhone();
+    };
+
+    FlatG.prototype.hideScrollbarIPhone = function(){
+    	/mobi/i.test(navigator.userAgent) && !window.location.hash && setTimeout(function () {
+		  window.scrollTo(0, 1);
+		}, 500);
     };
 
     return FlatG;
