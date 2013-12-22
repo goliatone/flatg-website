@@ -88,8 +88,11 @@ module.exports = function (grunt) {
             },
             livereload: {
                 files: [
-                    '<%= config.app %>/{,*/}*.html',
-                    '{.tmp,<%= config.app %>}/assets/css/{,*/}*.css',
+                    'Gruntfile.js',
+                    '<%= config.app %>/{,*/}*.{html,php,js}',
+                    '<%= config.app %>/themes/default/*.php',
+                    '<%= config.app %>/assets/css/*.css',
+                    '.tmp/assets/css/*.css',
                     '{.tmp,<%= config.app %>}/assets/js/{,*/}*.js',
                     '<%= config.app %>/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ],
@@ -217,17 +220,18 @@ module.exports = function (grunt) {
         compass: {
             options: {
                 sassDir: '<%= config.app %>/assets/css',
-                cssDir: '.tmp/assets/css',
+                cssDir: '<%= config.app %>/assets/css',
                 imagesDir: '<%= config.app %>/assets/images',
                 javascriptsDir: '<%= config.app %>/assets/js',
                 fontsDir: '<%= config.app %>/assets/fonts',
                 importPath: 'app/components',
-                relativeAssets: true
+                relativeAssets: true,
+                specify:['<%= config.app %>/assets/css/app.scss']
             },
             dist: {},
             server: {
                 options: {
-                    debugInfo: true
+                    debugInfo: false
                 }
             }
         },
