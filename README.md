@@ -1,13 +1,7 @@
 # FlatG
 ![FlatG website](https://raw.github.com/goliatone/flatg-website/master/app/assets/images/flat-g-logo-128.png)
 
-[![Build Status](https://secure.travis-ci.org/goliatone/FlatG.png)](http://travis-ci.org/goliatone/FlatG)
-
-## Getting Started
-Download the [production version][min] or the [development version][max].
-
-[min]: https://raw.github.com/goliatone/flatg-website/master/dist/FlatG.min.js
-[max]: https://raw.github.com/goliatone/flatg-website/master/dist/FlatG.js
+Source for [FlatG][]'s website.
 
 ## Development
 `sudo npm install && bower install`
@@ -19,22 +13,12 @@ To register FlatG in the [bower](http://bower.io/) [registry](http://sindresorhu
 `bower register FlatG git://github.com/goliatone/FlatG.git`
 
 
-## Documentation
-_(Coming soon)_
-
-## Examples
-_(Coming soon)_
-
-## Release History
-_(Nothing yet)_
-
-
 #### NOTES:
 
 - Use rsync to deploy builds. [Grunt][a] [tasks][b]
 - Refine build process and only export theme, rebuild assets and bundle together.
 
 
-
+[FlatG]: http://flat-g.com
 [a]: https://github.com/jedrichards/grunt-rsync
 [b]: https://npmjs.org/package/grunt-rsync-2
