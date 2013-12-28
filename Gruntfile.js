@@ -36,7 +36,7 @@ module.exports = function (grunt) {
     try {
         config.src = require('./component.json').appPath || config.src;
     } catch (e) {}
-
+    //TODO: Break into separate object. Easy to read!
     grunt.initConfig({
         config: config,
         livereload:{
@@ -417,7 +417,7 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'env:dev',
-            'preprocess:dev',
+            // 'preprocess:dev',
             'clean:server',
             'coffee:dist',
             'compass:server',
