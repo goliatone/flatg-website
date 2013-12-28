@@ -2,10 +2,22 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
+    <!--meta-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="target-densitydpi=device-dpi" />
+
     <title>FlatG</title>
+    <!-- TODO: Move to FlatG::metadata -->
+    <meta name="author" content="goliatone">
+    <meta name="description" content="FlatG - Simple PHP flat file library">
+    <meta name="keywords" content="php, markdown, blog, blog-engin, dropbox">
+
 
     <link rel="stylesheet" href="assets/css/app.css">
 
@@ -14,7 +26,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
     <!-- build:js assets/js/scripts.js -->
     <script src="components/foundation/js/vendor/custom.modernizr.js"></script>
-    <script src="components/foundation/js/vendor/jquery.js"></script>
     <!-- endbuild -->
 </head>
 <!--
@@ -80,26 +91,7 @@ love in Brooklyn.
   <!-- Footer -->
 <!-- TEMPLATE -->
 </body>
-    <!-- build:js assets/js/foundation.js -->
-    <script src="components/foundation/js/foundation/foundation.js"></script>
-    <script src="components/foundation/js/foundation/foundation.alerts.js"></script>
-    <script src="components/foundation/js/foundation/foundation.clearing.js"></script>
-    <script src="components/foundation/js/foundation/foundation.cookie.js"></script>
-    <script src="components/foundation/js/foundation/foundation.dropdown.js"></script>
-    <script src="components/foundation/js/foundation/foundation.forms.js"></script>
-    <script src="components/foundation/js/foundation/foundation.joyride.js"></script>
-    <script src="components/foundation/js/foundation/foundation.magellan.js"></script>
-    <script src="components/foundation/js/foundation/foundation.orbit.js"></script>
-    <script src="components/foundation/js/foundation/foundation.placeholder.js"></script>
-    <script src="components/foundation/js/foundation/foundation.reveal.js"></script>
-    <script src="components/foundation/js/foundation/foundation.section.js"></script>
-    <script src="components/foundation/js/foundation/foundation.tooltips.js"></script>
-    <script src="components/foundation/js/foundation/foundation.topbar.js"></script>
-    <!-- endbuild -->
-
     <script src="/components/requirejs/require.js" data-main="/main"></script>
-    <script type="text/javascript">$(document).foundation();</script>
-
     <?php if(isset($analytics_code)): ?>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
